@@ -44,13 +44,21 @@ public class UIController : MonoBehaviour
 	public void TapToStartButtonClick()
 	{
 
-		GameController.instance.isContinue = true;
+		//GameController.instance.isContinue = true;
 		//PlayerController.instance.SetArmForGaming();
+		StartCoroutine(DelayAndStartGame());
 		TapToStartPanel.SetActive(false);
 		GamePanel.SetActive(true);
 		SetLevelText(LevelController.instance.totalLevelNo);
 		SetGamePlayScoreText();
 
+	}
+
+	public IEnumerator DelayAndStartGame()
+	{
+		yield return new WaitForSeconds(.6f);
+		DrawMeshSbi.instance.GetComponent<Image>().enabled = true;
+		DrawMeshSbi.instance.isDrawable = true;
 	}
 
 	// RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA

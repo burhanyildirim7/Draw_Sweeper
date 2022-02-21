@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
 
     [HideInInspector] public bool isContinue;  // ayrintilar icin beni oku 19. satirdan itibaren bak
 
+    public int collectingCount = 0;
+
 
 	private void Awake()
 	{
@@ -61,5 +63,20 @@ public class GameController : MonoBehaviour
         else score = 1 * score;
         PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + score);
     }
+
+    public void CheckCollector()
+	{
+        if (collectingCount >= 10)
+		{
+            collectingCount = 0;
+		}
+		else
+		{
+            isContinue = false;
+            DrawMeshSbi.instance.isDrawable = false;
+            // game over iþlemleri yapacaðým... 
+            
+		}
+	}
 
 }
