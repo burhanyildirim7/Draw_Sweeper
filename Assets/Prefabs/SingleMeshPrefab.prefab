@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1335480140746178394}
   - component: {fileID: 4046103120919904232}
   - component: {fileID: 4141621022318968698}
-  - component: {fileID: 546645211560805064}
-  - component: {fileID: 1926328774632143032}
+  - component: {fileID: 8855242229139114256}
   m_Layer: 0
   m_Name: SingleMeshPrefab
   m_TagString: singleMesh
@@ -93,14 +92,14 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3433220726249062822}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c06827a0e4f575f45bd14a597b6c7453, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 5.2430744
+  m_Radius: 0.3
+  m_Height: 6.79384
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9452126, z: 0}
---- !u!54 &546645211560805064
+  m_Center: {x: 0, y: 0.16983071, z: 0}
+--- !u!54 &8855242229139114256
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,16 +115,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!135 &1926328774632143032
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3433220726249062822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.013787
-  m_Center: {x: 0.000000074505806, y: 0.018384257, z: -0.000000074505806}

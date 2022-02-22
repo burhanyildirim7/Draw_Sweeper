@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
     /// <param name="eklenecekScore">Her collectible da ne kadar score eklenip cikarilacaksa parametre olarak o sayi verilmeli</param>
     public void SetScore(int eklenecekScore)
 	{
-        if(PlayerController.instance.collectibleVarMi) score += eklenecekScore;
+        score += eklenecekScore;
         // Eðer oyunda collectible yok ise developer kendi score sistemini yazmalý...
 
     }
@@ -58,25 +58,27 @@ public class GameController : MonoBehaviour
     /// </summary>
     /// <param name="katsayi"></param>
     public void ScoreCarp(int katsayi)
-	{
-        if (PlayerController.instance.xVarMi) score *= katsayi;
-        else score = 1 * score;
+	{      
+        score = 1 * score;
         PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + score);
     }
 
+
+
     public void CheckCollector()
 	{
-        if (collectingCount >= 10)
-		{
-            collectingCount = 0;
-		}
-		else
-		{
-            isContinue = false;
-            DrawMeshSbi.instance.isDrawable = false;
-            // game over iþlemleri yapacaðým... 
-            
-		}
+
+        isContinue = false;
+        DrawMeshSbi.instance.DeleteAllMesh();
+        DrawMeshSbi.instance.ActivateDrawing();
 	}
+
+    public void FinalEvents()
+	{
+        ScoreCarp(1);
+        isContinue = false;
+        DrawMeshSbi.instance.isDrawable = false;
+        UIController.instance.ActivateWinScreen();
+    }
 
 }

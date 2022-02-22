@@ -10,7 +10,7 @@ public class BreakMesh : MonoBehaviour
 		Debug.Log("çarpýþma algýlandý...");
 		if (other.transform.CompareTag("singleMesh"))
 		{
-			GetComponent<Collider>().enabled = false;
+			//GetComponent<Collider>().enabled = false;
 			DrawMeshSbi.instance.BreakMesh(other.transform.position);
 		}
 	}

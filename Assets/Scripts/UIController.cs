@@ -56,7 +56,7 @@ public class UIController : MonoBehaviour
 
 	public IEnumerator DelayAndStartGame()
 	{
-		yield return new WaitForSeconds(.6f);
+		yield return new WaitForSeconds(.4f);
 		DrawMeshSbi.instance.GetComponent<Image>().enabled = true;
 		DrawMeshSbi.instance.isDrawable = true;
 	}
@@ -69,6 +69,7 @@ public class UIController : MonoBehaviour
 		TapToStartPanel.SetActive(true);
 		LevelController.instance.RestartLevelEvents();
 		SetTapToStartScoreText();
+		DrawMeshSbi.instance.StartingEvents();
 	}
 
 
@@ -81,6 +82,8 @@ public class UIController : MonoBehaviour
 		GamePanel.SetActive(false);
 		LevelController.instance.NextLevelEvents();
 		StartCoroutine(StartScreenCoinEffect());
+		DrawMeshSbi.instance.StartingEvents();
+
 	}
 
 
@@ -133,8 +136,8 @@ public class UIController : MonoBehaviour
 		int sayac = 0;
 		while(sayac < GameController.instance.score)
 		{
-			sayac++;
-			if(sayac %2 == 0)
+			sayac+=10;
+			if(sayac %20 == 0)
 			{
 				GameObject effectObj = Instantiate(winScreenEffectObject, new Vector3(144, 400, 0), Quaternion.identity,winScreenCoinImage.transform);
 				effectObj.transform.localPosition = new Vector3(144,300,0);
@@ -151,7 +154,7 @@ public class UIController : MonoBehaviour
 	IEnumerator WinScreenEffect(GameObject effectObj)
 	{
 		float sayac = 0;
-		float scale = 0;
+		float scale;
 		while (Vector2.Distance(effectObj.transform.position, winScreenCoinImage.transform.position) > 0.05f)
 		{
 			effectObj.transform.position = Vector2.Lerp(effectObj.transform.position, winScreenCoinImage.transform.position, sayac);
@@ -177,7 +180,6 @@ public class UIController : MonoBehaviour
 			yield return new WaitForSeconds(.025f);
 			if(adet %3 == 0)
 			{
-				Debug.Log("çalýþtýýýý");
 				GameObject coin = Instantiate(winScreenEffectObject, startScreenCoinImage.transform.position, Quaternion.identity,TapToStartPanel.transform);
 				coin.GetComponent<Image>().sprite = winScreenCoinImage.GetComponent<Image>().sprite;
 				coin.transform.rotation = startScreenCoinImage.transform.rotation;

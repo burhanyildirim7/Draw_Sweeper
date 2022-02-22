@@ -14,6 +14,7 @@ public class DrawMeshSbi : MonoBehaviour
     public List<Material> materials = new();
     private List<GameObject> singleMeshes = new();
     public bool isDrawable = false;
+    public bool drawableRelase = false;
 
 
 	private void Awake()
@@ -41,19 +42,26 @@ public class DrawMeshSbi : MonoBehaviour
             CreateSingleMesh(position);
         }
 
-        if(Input.GetMouseButtonUp(0) && isDrawable)
+        if(Input.GetMouseButtonUp(0) && isDrawable && singleMeshes.Count >5)
 		{
-            isDrawable = false;
-            GetComponent<Image>().enabled = false;
+            DeactivateDrawing();
             GameController.instance.isContinue = true;
             AlignMesh();
-            DeleteOlSprite();
+		}
+
+        if(drawableRelase)
+		{
+            if(Input.GetMouseButtonUp(0))
+			{
+                drawableRelase = false;
+                isDrawable = true;
+			}
 		}
     }
 
     void CreateSingleMesh(Vector3 position)
     {
-        if(Vector3.Distance(position, tempSingleMeshPosition) > 5f)
+        if(Vector3.Distance(position, tempSingleMeshPosition) > 1f)
 		{
             tempSingleMeshPosition = position;
             float x = -1.92f + ((position.x - meshSideDistanceX) / 750) * 3.4f;
@@ -65,6 +73,19 @@ public class DrawMeshSbi : MonoBehaviour
         }     
     }
 
+    public void DeactivateDrawing()
+	{
+        isDrawable = false;
+        GetComponent<Image>().enabled = false;
+        DeleteAllSprite();
+    }
+
+    public void ActivateDrawing()
+	{
+        drawableRelase = true;
+        GetComponent<Image>().enabled = true;
+    }
+
     public void BreakMesh(Vector3 position)
 	{
 
@@ -72,7 +93,7 @@ public class DrawMeshSbi : MonoBehaviour
 		{
             foreach (GameObject singleMesh in singleMeshes)
             {
-                if (singleMesh.transform.position.x+.5f > position.x)
+                if (singleMesh.transform.position.x+.2f > position.x)
 				{
                     singleMesh.transform.parent = null;              
                 }
@@ -82,7 +103,7 @@ public class DrawMeshSbi : MonoBehaviour
         {
             foreach (GameObject singleMesh in singleMeshes)
             {
-                if (singleMesh.transform.position.x - .5f < position.x)
+                if (singleMesh.transform.position.x - .2f < position.x)
                 {
                     singleMesh.transform.parent = null;
                 }
@@ -107,16 +128,48 @@ public class DrawMeshSbi : MonoBehaviour
         {
             singleMesh.transform.localPosition = new(singleMesh.transform.localPosition.x,singleMesh.transform.localPosition.y,singleMesh.transform.localPosition.z + distance);
         }
-        Debug.Log(minZ);
+
 	}
 
-   public void DeleteOlSprite()
+    public void DeleteAllSprite()
 	{
         foreach(Transform child in transform)
 		{
             Destroy(child.gameObject);
 		}
-	}
+    }
 
+    public void DeleteAllMesh()
+	{
+        foreach (Transform child in meshParent.transform)
+        {
+            if(!child.CompareTag("uc") && !child.CompareTag("sap"))
+            Destroy(child.gameObject);
+        }
+        singleMeshes.Clear();
+    }
+
+    public void StartingEvents()
+    {
+        Debug.Log("çalýþtý");
+        meshParent.transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
+        meshParent.transform.parent.transform.position = Vector3.zero;
+        GameController.instance.isContinue = false;
+        GameController.instance.score = 0;
+        meshParent.transform.position = new Vector3(0, 1.1f, 1);
+        DeleteAllMeshForStarting();
+        DeleteAllSprite();
+        UcKontrol.instance.isEnable = true;
+    }
+
+    public void DeleteAllMeshForStarting()
+    {
+        GameObject[] meshes = GameObject.FindGameObjectsWithTag("singleMesh");
+		for (int i = 0; i < meshes.Length; i++)
+		{
+            Destroy(meshes[i].gameObject);
+		}
+        singleMeshes.Clear();
+    }
 
 }

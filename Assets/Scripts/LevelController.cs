@@ -70,7 +70,7 @@ public class LevelController : MonoBehaviour
 		Destroy(currentLevelObj);
 		IncreaseLevelNo();
 		LevelStartingEvents();
-		PlayerController.instance.StartingEvents();		
+		//PlayerController.instance.StartingEvents();		
 	}
 
 	/// <summary>
@@ -79,7 +79,9 @@ public class LevelController : MonoBehaviour
 	public void RestartLevelEvents()
 	{
 		Elephant.LevelFailed(totalLevelNo);
-		PlayerController.instance.StartingEvents();
+		Destroy(currentLevelObj);
+		LevelStartingEvents();
+		//PlayerController.instance.StartingEvents();
 
 	}
 }
