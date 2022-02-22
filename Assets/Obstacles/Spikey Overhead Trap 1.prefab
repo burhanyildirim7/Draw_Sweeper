@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 5890113748377103157}
   - component: {fileID: 5358315759002694416}
   - component: {fileID: 4655863783906753973}
+  - component: {fileID: 5452922167987500814}
   m_Layer: 0
   m_Name: Obstacle-3.000
   m_TagString: engel
@@ -398,11 +399,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7766211969215742796}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.78411233, y: 0.7609672, z: 0.78411233}
   m_Center: {x: 0, y: -0.37047526, z: 0}
+--- !u!114 &5452922167987500814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766211969215742796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e121a7b58f13d1f44a06f17c0ab3ce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8338903797814637072
 GameObject:
   m_ObjectHideFlags: 0
