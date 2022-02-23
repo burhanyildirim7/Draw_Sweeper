@@ -95,6 +95,7 @@ public class DrawMeshSbi : MonoBehaviour
             {
                 if (singleMesh.transform.position.x+.2f > position.x)
 				{
+                    singleMesh.GetComponent<Collider>().enabled = false;
                     singleMesh.transform.parent = null;              
                 }
             }
@@ -105,6 +106,7 @@ public class DrawMeshSbi : MonoBehaviour
             {
                 if (singleMesh.transform.position.x - .2f < position.x)
                 {
+                    singleMesh.GetComponent<Collider>().enabled = false;
                     singleMesh.transform.parent = null;
                 }
             }
