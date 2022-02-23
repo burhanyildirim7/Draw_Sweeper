@@ -387,13 +387,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928144708272821239}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &1019783015298960262
 GameObject:
@@ -1313,13 +1313,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2204278839078965511}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &2224611658546171309
 GameObject:
@@ -1596,13 +1596,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2617328679624470720}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &2692229212088345187
 GameObject:
@@ -2068,13 +2068,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3784229173056085549}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &4001332583057910178
 GameObject:
@@ -2350,13 +2350,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4370353998876764300}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &4521910532046229176
 GameObject:
@@ -2465,13 +2465,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4654256966291158260}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &4889744498775288649
 GameObject:
@@ -2695,13 +2695,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5034942149186446448}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &5082022555487602639
 GameObject:
@@ -3060,13 +3060,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5988892591457109093}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &6167534382017979749
 GameObject:
@@ -3372,13 +3372,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6291361777607397193}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &6393701046982071077
 GameObject:
@@ -3636,13 +3636,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6524087750616504056}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &6591024843662011985
 GameObject:
@@ -4233,13 +4233,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7003045467930237959}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &7037096314312262637
 GameObject:
@@ -4510,13 +4510,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7696384774848599653}
   serializedVersion: 2
-  m_Mass: 100000
-  m_Drag: 0
+  m_Mass: 1
+  m_Drag: 10
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!1 &7754669417822367400
 GameObject:
