@@ -8,6 +8,7 @@ public class Collector : MonoBehaviour
 	{
 		if (other.CompareTag("collectible"))
 		{
+			other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 			GameController.instance.SetScore(10);
 			other.tag = "emptytag";
 			GameController.instance.collectingCount++;

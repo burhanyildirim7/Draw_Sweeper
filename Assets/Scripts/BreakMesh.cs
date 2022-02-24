@@ -7,7 +7,6 @@ public class BreakMesh : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("çarpýþma algýlandý...");
 		if (other.transform.CompareTag("singleMesh"))
 		{
 			//GetComponent<Collider>().enabled = false;

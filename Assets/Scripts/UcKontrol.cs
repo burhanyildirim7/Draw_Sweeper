@@ -22,7 +22,6 @@ public class UcKontrol : MonoBehaviour
 			transform.parent.position = new(0,transform.parent.position.y,transform.parent.position.z);
 			if(isEnable)GameController.instance.FinalEvents();
 			isEnable = false;
-			Debug.Log("deðiyor...");
 			
 		}
 		else if (other.CompareTag("midkova"))

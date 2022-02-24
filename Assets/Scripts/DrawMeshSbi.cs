@@ -153,7 +153,6 @@ public class DrawMeshSbi : MonoBehaviour
 
     public void StartingEvents()
     {
-        Debug.Log("çalýþtý");
         meshParent.transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
         meshParent.transform.parent.transform.position = Vector3.zero;
         GameController.instance.isContinue = false;
