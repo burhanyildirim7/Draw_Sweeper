@@ -20,6 +20,7 @@ TagManager:
   - finishkova
   - midkova
   - uc
+  - onBoarding
   layers:
   - Default
   - TransparentFX

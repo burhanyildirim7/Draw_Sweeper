@@ -15,6 +15,7 @@ public class DrawMeshSbi : MonoBehaviour
     private List<GameObject> singleMeshes = new();
     public bool isDrawable = false;
     public bool drawableRelase = false;
+    public GameObject onBoarding;
 
 
 	private void Awake()
@@ -40,6 +41,7 @@ public class DrawMeshSbi : MonoBehaviour
             Image newBrush = Instantiate(brushPrefab, transform);
             newBrush.transform.position = new(position.x, position.y, 0);
             CreateSingleMesh(position);
+            if (LevelController.instance.totalLevelNo < 3) CloseOnBoarding();
         }
 
         if(Input.GetMouseButtonUp(0) && isDrawable && singleMeshes.Count >5)
@@ -137,8 +139,8 @@ public class DrawMeshSbi : MonoBehaviour
 	{
         foreach(Transform child in transform)
 		{
-            Destroy(child.gameObject);
-		}
+            if (!child.CompareTag("onBoarding")) Destroy(child.gameObject);
+        }
     }
 
     public void DeleteAllMesh()
@@ -171,6 +173,16 @@ public class DrawMeshSbi : MonoBehaviour
             Destroy(meshes[i].gameObject);
 		}
         singleMeshes.Clear();
+    }
+
+    public void ShowOnBoarding()
+    {
+        onBoarding.SetActive(true);
+    }
+
+    public void CloseOnBoarding()
+    {
+        onBoarding.SetActive(false);
     }
 
 }

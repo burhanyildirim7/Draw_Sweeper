@@ -46,11 +46,13 @@ public class UIController : MonoBehaviour
 
         //GameController.instance.isContinue = true;
         //PlayerController.instance.SetArmForGaming();
+        
         StartCoroutine(DelayAndStartGame());
         TapToStartPanel.SetActive(false);
         GamePanel.SetActive(true);
         SetLevelText(LevelController.instance.totalLevelNo);
         SetGamePlayScoreText();
+        
 
     }
 
@@ -59,6 +61,7 @@ public class UIController : MonoBehaviour
         yield return new WaitForSeconds(.4f);
         DrawMeshSbi.instance.GetComponent<Image>().enabled = true;
         DrawMeshSbi.instance.isDrawable = true;
+        if (LevelController.instance.totalLevelNo < 3) DrawMeshSbi.instance.ShowOnBoarding();
     }
 
     // RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA
