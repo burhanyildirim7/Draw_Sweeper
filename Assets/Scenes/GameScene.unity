@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.47698158, g: 0.7989754, b: 0.8985044, a: 1}
+  m_IndirectSpecularColor: {r: 0.4770398, g: 0.79908794, b: 0.8987446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -748,9 +748,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83a6f3f10ed54a8eaca5f7c7fa443cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swerveSpeed: 1
+  swerveSpeed: 0.5
   _getPoint: {fileID: 326513068}
-  _radius: 2.8
+  _radius: 2.5
 --- !u!1 &1124119772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,9 +1242,9 @@ MonoBehaviour:
   tempLevelNo: 0
   totalLevelNo: 0
   levels:
+  - {fileID: 7871060463052197671, guid: 78aa766ca198e1540b65eac660f88ed6, type: 3}
+  - {fileID: 7392606275877177291, guid: 18aae037c1b3b354797fc0a8074bdb18, type: 3}
   - {fileID: 3434090177407481734, guid: ea586b033397d40418e1863d8b6f36e1, type: 3}
-  - {fileID: 7392606275877177291, guid: 18aae037c1b3b354797fc0a8074bdb18, type: 3}
-  - {fileID: 7392606275877177291, guid: 18aae037c1b3b354797fc0a8074bdb18, type: 3}
 --- !u!1 &2068566377
 GameObject:
   m_ObjectHideFlags: 0
@@ -3200,7 +3200,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap & Choose
+  m_Text: Tap & Sweep
 --- !u!114 &2037673477374901604
 MonoBehaviour:
   m_ObjectHideFlags: 0
