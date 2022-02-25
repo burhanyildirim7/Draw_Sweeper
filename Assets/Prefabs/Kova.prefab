@@ -507,6 +507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4264a460959ec4baedd17eb5dcf8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldCoin: {fileID: 7837207635042717006, guid: 1ca8c941e3025e84c9910483b74eedad, type: 3}
+  goldTarget: {fileID: 0}
 --- !u!1001 &4490533127950841329
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class GameController : MonoBehaviour
 {
     public static GameController instance; // singleton yapisi icin gerekli ornek ayrintilar icin BeniOku 22. satirdan itibaren bak.
@@ -12,9 +14,10 @@ public class GameController : MonoBehaviour
     [HideInInspector] public bool isContinue;  // ayrintilar icin beni oku 19. satirdan itibaren bak
 
     public int collectingCount = 0;
+    public Transform goldTarget;
 
 
-	private void Awake()
+    private void Awake()
 	{
         if (instance == null) instance = this;
         //else Destroy(this);
@@ -34,6 +37,7 @@ public class GameController : MonoBehaviour
     public void SetScore(int eklenecekScore)
 	{
         score += eklenecekScore;
+        UIController.instance.SetGamePlayScoreText();
         // Eðer oyunda collectible yok ise developer kendi score sistemini yazmalý...
 
     }

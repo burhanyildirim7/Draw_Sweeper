@@ -84,7 +84,6 @@ public class DrawMeshSbi : MonoBehaviour
 
     public void ActivateDrawing()
 	{
-        drawableRelase = true;
         GetComponent<Image>().enabled = true;
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class UIController : MonoBehaviour
 {
     public static UIController instance; // Singleton yapisi icin gerekli ornek
@@ -95,7 +96,7 @@ public class UIController : MonoBehaviour
     /// </summary>
     public void SetGamePlayScoreText()
     {
-        gamePlayScoreText.text = PlayerPrefs.GetInt("totalScore").ToString();
+        gamePlayScoreText.text = GameController.instance.score.ToString();
     }
 
 
@@ -134,6 +135,7 @@ public class UIController : MonoBehaviour
 
     IEnumerator WinScreenDelay()
     {
+        yield return new WaitForSeconds(2f);
         WinPanel.SetActive(true);
         winScreenScoreText.text = "0";
         int sayac = 0;
