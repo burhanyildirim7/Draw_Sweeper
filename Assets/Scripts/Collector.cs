@@ -13,7 +13,7 @@ public class Collector : MonoBehaviour
 		{
 			DrawMeshSbi.instance.drawableRelase = true;
 			other.transform.tag = "emptytag";
-			other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+			other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
 			StartCoroutine(CoinAnimation(other.transform.position));
 			other.tag = "emptytag";
 			GameController.instance.collectingCount++;
