@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2572263828461557458}
   - component: {fileID: 3723512550006857818}
   - component: {fileID: 7392062736009325980}
+  - component: {fileID: 8936389312152453155}
   m_Layer: 0
   m_Name: flipped__Group6306
   m_TagString: collectible
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3157360434739918228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,3 +115,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.03087615
   m_Center: {x: 0.00000050067905, y: 0.008450875, z: -0.001712501}
+--- !u!114 &8936389312152453155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3157360434739918228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecbc26292d2f422b8d8a8d0118b5750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

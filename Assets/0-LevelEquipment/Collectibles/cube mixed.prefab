@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3127755822293862401}
   - component: {fileID: 3044309961245075427}
   - component: {fileID: -3510908785929232965}
+  - component: {fileID: 4376968436899540905}
   m_Layer: 0
   m_Name: cube mixed
   m_TagString: collectible
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3488311867990075860}
   m_LocalRotation: {x: -0.6613434, y: 0.2499881, z: 0.24990085, w: 0.6615743}
   m_LocalPosition: {x: -0, y: -0.5, z: -0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 12.5, y: 12.5, z: 12.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,3 +115,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.030000014
   m_Center: {x: 0.0000016341081, y: -0.0000017042427, z: 0.03000001}
+--- !u!114 &4376968436899540905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488311867990075860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecbc26292d2f422b8d8a8d0118b5750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

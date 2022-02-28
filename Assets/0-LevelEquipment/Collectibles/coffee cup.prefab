@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4780311050910482018}
   - component: {fileID: 1744167510413376996}
   - component: {fileID: 3816608482272230851}
+  - component: {fileID: 4264895767053099708}
   m_Layer: 0
   m_Name: coffee cup
   m_TagString: collectible
@@ -110,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 5268300336310052056}
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -0, y: -0.2, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 40}
+  m_LocalScale: {x: 40, y: 40, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8953568694817557437}
@@ -148,6 +149,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.0076740165
   m_Center: {x: 0, y: 2.2204462e-17, z: 0.0019102166}
+--- !u!114 &4264895767053099708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268300336310052056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecbc26292d2f422b8d8a8d0118b5750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7093749765742092193
 GameObject:
   m_ObjectHideFlags: 0

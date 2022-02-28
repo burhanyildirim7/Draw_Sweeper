@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1862901280028981052}
   - component: {fileID: 4585604857047888193}
   - component: {fileID: -7149185664411276054}
+  - component: {fileID: 6145055596643830352}
   m_Layer: 0
   m_Name: can_V03
   m_TagString: collectible
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3853637768437357161}
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 600, y: 600, z: 600}
+  m_LocalScale: {x: 800, y: 800, z: 800}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,3 +115,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.00037322514
   m_Center: {x: 7.4505804e-11, y: 2.1357803e-21, z: 0.000799808}
+--- !u!114 &6145055596643830352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3853637768437357161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecbc26292d2f422b8d8a8d0118b5750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
